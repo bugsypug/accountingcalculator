@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accounting App v7</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Accounting App</h1>
+
+    <!-- Add Accounts -->
+    <section>
+      <h2>Add Accounts</h2>
+      <div id="account-list"></div>
+      <input type="text" id="account-name" placeholder="Account name" />
+      <select id="account-type">
+        <option value="asset">Asset</option>
+        <option value="liability">Liability</option>
+        <option value="equity">Equity</option>
+        <option value="expense">Expense</option>
+        <option value="income">Income</option>
+      </select>
+      <button onclick="addAccount()">Add Account</button>
+      <button onclick="resetApp()">Reset All</button>
+    </section>
+
+    <!-- Record Transactions -->
+    <section>
+      <h2>Record Transactions</h2>
+      <input type="date" id="transaction-date" />
+      <input type="text" id="transaction-desc" placeholder="Description (optional)" />
+      <label>From:</label>
+      <select id="from-account"></select>
+      <label>To:</label>
+      <select id="to-account"></select>
+      <input type="number" id="amount" placeholder="Amount" />
+      <button onclick="recordTransaction()">Record</button>
+    </section>
+
+    <!-- Ledgers -->
+    <section>
+      <h2>Ledgers</h2>
+      <div id="ledgers" class="ledger-grid"></div>
+    </section>
+
+    <!-- Trial Balance -->
+    <section>
+      <h2>Trial Balance</h2>
+      <table id="trial-balance">
+        <thead>
+          <tr><th>Account</th><th>Debit</th><th>Credit</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Financial Statements -->
+    <section>
+      <h2>Income Statement</h2>
+      <pre id="income-statement" class="statement-pre"></pre>
+
+      <h2>Balance Sheet</h2>
+<div id="balance-sheet" class="bs-grid"></div>
+
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
